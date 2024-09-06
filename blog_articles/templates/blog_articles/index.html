@@ -1,0 +1,9 @@
+{% extends 'blog_articles/base.html'%}
+{% block main_content %}
+{% for article in articles %}
+<div class="latest_articles">
+    <h3><a href="{% url 'article' article.slug %}">{{ article.title }}</a></h3>
+    <p class="description">{{ article.description }}</p>
+</div>
+{% endfor %}
+{% endblock main_content %}

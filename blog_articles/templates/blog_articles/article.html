@@ -1,0 +1,11 @@
+{% extends 'blog_articles/base.html'%}
+{% block main_content %}
+<div class="latest_articles">
+    <h3 class="details">{{ title }}</h3>
+    <p class="description">{{ content }}</p>
+</div>
+<h3 class="comment">Комментарии:</h3>
+{% for comment in comments %}
+<p class="comment">{{ comment }}</p>
+{% endfor %}
+{% endblock main_content %}

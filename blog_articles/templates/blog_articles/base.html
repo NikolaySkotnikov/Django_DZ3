@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+    <link rel="stylesheet" href="{% static 'blog_articles/css/style.css' %}">
+    <script src="{% static 'blog_articles/js/app.js' %}" defer></script>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Страница с блоком</h1>
+        </header>
+        <nav>
+            <p><a href="{% url 'latest_articles' %}">Последние статьи</a> | <a href="{% url 'all_articles'%}">Все статьи</a></p>
+        </nav>
+        {% block main_content %}
+        {% endblock main_content %}
+        <footer>
+            <h2>Футер страницы</h2>
+        </footer>
+    </div>
+</body>
+</html>
